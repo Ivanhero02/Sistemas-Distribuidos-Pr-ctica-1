@@ -59,12 +59,11 @@ int main(int argc, char *argv[])
             perror("read failed");
             exit(EXIT_FAILURE);
         }
-        
-            if (number != 0)
-            {
-                number = atoi(buffer);
+        number = atoi(buffer);
                 printf("Número recibido: %d\n");
                 numero = number + 1;
+            if (number != 0)
+            {
                 sprintf(buffer, "%d", numero);
                 printf("Enviando el número recibido más una unidad...\n");
                 // Enviar la cadena de caracteres al servidor
